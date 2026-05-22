@@ -1,5 +1,19 @@
 plugins {
     alias(libs.plugins.android.library)
+    id 'maven-publish'
+}
+
+project.ext {
+    artifactId = 'lib_with_submodule'
+    groupId = 'com.github.aakumykov'
+
+    majorVersionNum = 0
+    minorVersionNum = 0
+    patchVersionNum = 1
+
+    versionCode = 1
+
+    versionName = majorVersionNum + "." + minorVersionNum + "." + patchVersionNum
 }
 
 android {
@@ -20,7 +34,11 @@ android {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
-
+    publishing {
+        singleVariant('release') {
+            withSourcesJar()
+        }
+    }
 }
 
 dependencies {
@@ -30,4 +48,17 @@ dependencies {
     testImplementation libs.junit
     androidTestImplementation libs.androidx.espresso.core
     androidTestImplementation libs.androidx.junit
+}
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = project.groupId
+            artifactId = project.artifactId
+            version = versionName
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
 }
