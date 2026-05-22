@@ -26,5 +26,4 @@ rootProject.name = "lib_with_submodule"
 include ':app'
 include ':lib_with_submodule'
 include ':test_android_module'
-include ':qwerty_test_lib'
 
