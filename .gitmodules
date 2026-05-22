@@ -1,0 +1,3 @@
+[submodule "test_android_module"]
+	path = test_android_module
+	url = git@github.com:aakumykov/test_android_module.git
