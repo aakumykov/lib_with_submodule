@@ -9,9 +9,9 @@ project.ext {
 
     majorVersionNum = 0
     minorVersionNum = 0
-    patchVersionNum = 5
+    patchVersionNum = 6
 
-    versionCode = 5
+    versionCode = 6
 
     versionName = majorVersionNum + "." + minorVersionNum + "." + patchVersionNum
 }
@@ -52,9 +52,9 @@ dependencies {
     androidTestImplementation libs.androidx.junit
 
     if (isJitPack) {
-        implementation project(':test_android_module')
-    } else {
         implementation 'com.github.aakumykov:test_android_module:0.0.4'
+    } else {
+        implementation project(':test_android_module')
     }
 }
 
