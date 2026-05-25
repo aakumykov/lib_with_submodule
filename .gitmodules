@@ -4,3 +4,6 @@
 [submodule "qwerty_test_lib"]
 	path = qwerty_test_lib
 	url = git@github.com:aakumykov/qwerty_test_lib
+[submodule "copy_between_streams_with_speed"]
+	path = copy_between_streams_with_speed
+	url = git@github.com:aakumykov/copy_between_streams_with_speed.git

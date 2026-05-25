@@ -27,4 +27,5 @@ include ':app'
 include ':lib_with_submodule'
 include ':test_android_module'
 include ':qwerty_test_lib'
+include ':copy_between_streams_with_speed'
 

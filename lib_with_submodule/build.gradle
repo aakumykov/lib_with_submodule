@@ -9,9 +9,9 @@ project.ext {
 
     majorVersionNum = 0
     minorVersionNum = 0
-    patchVersionNum = 9
+    patchVersionNum = 10
 
-    versionCode = 9
+    versionCode = 10
 
     versionName = majorVersionNum + "." + minorVersionNum + "." + patchVersionNum
 }
@@ -44,6 +44,7 @@ android {
 boolean isJitPack = System.getenv("JITPACK") == "true"
 
 dependencies {
+    implementation project(':copy_between_streams_with_speed')
     implementation project(':qwerty_test_lib')
     implementation libs.androidx.appcompat
     implementation libs.androidx.core.ktx
