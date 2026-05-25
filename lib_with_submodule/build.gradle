@@ -9,9 +9,9 @@ project.ext {
 
     majorVersionNum = 0
     minorVersionNum = 0
-    patchVersionNum = 7
+    patchVersionNum = 8
 
-    versionCode = 7
+    versionCode = 8
 
     versionName = majorVersionNum + "." + minorVersionNum + "." + patchVersionNum
 }
@@ -44,6 +44,7 @@ android {
 boolean isJitPack = System.getenv("JITPACK") == "true"
 
 dependencies {
+    implementation project(':qwerty_test_lib')
     implementation libs.androidx.appcompat
     implementation libs.androidx.core.ktx
     implementation libs.material

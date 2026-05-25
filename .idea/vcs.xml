@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/qwerty_test_lib" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/test_android_module" vcs="Git" />
   </component>
 </project>
